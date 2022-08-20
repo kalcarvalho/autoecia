@@ -1,0 +1,65 @@
+version: "3.7"
+services:
+  tomcat:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: autoecia
+    container_name: autoecia-app
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logs:/usr/local/tomcat/logs
+      - ./web:/usr/local/tomcat/webapps/autoecia
+    networks:
+      - autoecia
+
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql_autoecia_container
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/data/:/docker-entrypoint-initdb.d
+    cap_add:
+      - SYS_NICE # Desabilitar o aviso "mbind: Operation not permitted"
+    networks:
+      - autoecia
+
+  web:
+    depends_on:
+      - mysql-db
+    image: tomcat
+    volumes:
+      - ./dist/autoecia.war:/usr/local/tomcat/webapps/autoecia.war
+    ports:
+      - '8082:8080'
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+    networks:
+      - autoecia
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    links:
+      - mysql-db
+    ports:
+      - 80:80
+    environment:
+      - PMA_ARBITRARY=1
+    networks:
+      - autoecia
+
+networks:
+  autoecia:
+    driver: bridge

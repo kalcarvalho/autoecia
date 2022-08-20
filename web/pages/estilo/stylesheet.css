@@ -1,0 +1,193 @@
+/* CSS Document */
+
+body {
+	background-color: #FFF;
+	font-family: "Trebuchet MS", Verdana;
+        
+}
+
+.menulateral {
+
+	font-weight:bold;
+	text-align: left;
+	color:#000000;
+	background-color:#FCC;
+	font-size:12px;
+	line-height: 150%;
+}
+
+.menulateral .titulo {
+	background-color:#FF0000;
+	color:#FFFFFF;
+	text-align:center;
+
+}
+
+.proposta {
+
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+	background-color: #fcc;
+	font-size: 13px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-style: double;
+        border-width: 3px;
+        border-color: red;
+}
+	
+.busca {
+	font-weight:bold;
+	text-align: center;
+	color:#000000;
+	background-color:#ffffff;
+}
+
+.busca .avancada {
+	font-size:10px;
+	text-decoration: none;
+	vertical-align:middle
+}
+
+.lateral {
+
+	font-weight:bold;
+	text-align: center;
+	color:#0000AA;
+	background-color:#ffffff;
+}
+
+.button {
+	text-align: center;
+	border: 1px solid #FF0000;
+	font-weight: bold;
+	font-size: 11px;
+	background-color: #fcc;
+	color: #000000;
+	padding: 1px;
+	font-family:"Trebuchet MS", Verdana
+}
+
+.button {
+	text-align: center;
+	border: 1px solid #FF0000;
+	font-weight: bold;
+	font-size: 11px;
+	background-color: #fcc;
+	color: #000000;
+	padding: 1px;
+	font-family: "Trebuchet MS", Verdana
+}
+
+
+.destaque .titulo {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #FF0000;
+}
+.destaque .detalhe {
+	font-weight: normal;
+	text-align: left;
+	background-color:#ffffff;
+        font-size: 13px;
+        padding-left: 5px;
+        padding-top: 12px;    
+        line-height: 150%;
+        
+}
+.destaque .caracteristicas {
+
+    font-weight: normal;
+    text-align: left;
+    background-color:#ffffff;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-top: 5px;    
+    line-height: 110%;
+   
+}
+.destaque .detalhe .item {
+    padding-left: 15px;
+    text-align: center;
+}
+
+.destaque .fotos {
+    font-weight: normal;
+    font-size: 12px;
+    background-color: #ffffff;
+    word-spacing: 5px;
+    color: red;
+    text-decoration: none;
+}
+
+.destaque .fotos .anterior {
+    text-decoration: none;  
+    text-align: left;
+}
+
+.destaque .fotos .centro {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.destaque .fotos .proxima {
+    text-decoration: none;
+    text-align: right;
+}
+
+
+
+.destaque .imagem {
+    padding-top: 10px;
+}
+
+.rodape {
+    font-weight: normal;
+    text-align: center;
+    color:#000000;
+    font-size: 11px;
+    text-decoration: none;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #FF0000;
+    padding-top: 10px;
+}
+
+.preco {
+    text-align: center;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #0000FF;
+}
+
+.destaque .acessorios {
+    text-decoration: none;
+}
+
+.destaque .acessorios .title {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #FF0000;
+}
+
+.destaque .acessorios .detail {
+    font-weight: normal;
+    text-align: left;
+    background-color:#ffffff;
+    font-size: 13px;
+    padding-left: 5px;
+    line-height: 110%;
+}
+
+.destaque .acessorios .detail .unique {
+    text-align: left;
+}
+
+.destaque .acessorios .detail .price {
+    text-align: center;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #0000FF;
+}
